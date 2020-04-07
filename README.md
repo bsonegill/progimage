@@ -19,5 +19,14 @@ requests
 
 A brief overview of the files in the repository can be found below, each (python) file has descriptive comments to further elaborate spesific functionality.
 
-* **Progimage.py:** This is the main flask app that contains the code behind all the API endpoints
-* 
+* **ProgImage.py:** The main flask app containing API endpoints and their functionality
+* **progimage_helpers.py:** Library of functions that can be used to work with the API endpoints
+* **test_ProgImage.py:** Unittests for `ProgImage.py`
+* **config.py:** Configurations for `ProgImage.py` and `test_ProgImage.py`
+* **database.db:** Database containing table `img` that keeps record of uploaded images and their unique ID's
+
+## Directories
+
+* **uploads:** User uploaded images will be stored here
+* **temp_dir:** Stores files that are being worked on by `ProgImage.py`, this directory should be empty except when a script is running
+* **test_uploads:** contains images that are used for unit testing
