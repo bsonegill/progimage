@@ -43,7 +43,7 @@ def upload_images():
     if request.files:
         file_ids = {}
         for file in request.files:
-            ################################ Validate file and handle execptions
+            
             # Handle empty file names
             if file == "":
                 return "no_file_name"
@@ -56,13 +56,11 @@ def upload_images():
             # Make sure file type is valid
             if allowed_extention(file) == False:
                 return "Invalid file type"
-
-            ####################################################################
+           
             # Make sure that we store secure filename
             file_name = secure_filename(file)
             file_name_only, file_ext = file_name.rsplit(".", 1)
-            ####################################################################
-
+            
             # Save Image to designated folder
             file_data.save(os.path.join(image_uploads, file_name))
 
